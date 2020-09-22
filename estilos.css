@@ -1,0 +1,41 @@
+.fondo{
+    background-color: #F4F4F4;  
+}
+
+.navbar-brand{
+    background-color: #907878;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#C6C8CF;
+}
+
+.collapse {
+    background-color: #907878; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C6C8CF;
+}
+
+.navbar  {
+    background-color: #907878;  
+}
+
+.text-center{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+color:#907878;
+}
+
+.form-group{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#907878  
+}
+ 
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #907878;
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #907878; 
+}
