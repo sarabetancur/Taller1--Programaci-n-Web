@@ -42,7 +42,7 @@
     <div class="row justify-content-center">
          <div class="col-4">
 
-         <h6 class="mt-4 text-center"> INGRESE LOS SIGUIENTES DATOS </h6>
+         <h6 class="mt-4 text-center"> INGRESE LOS SIGUIENTES DATOS PARA CALCULAR SU MASA CORPORAL </h6>
                 
 <form class= "mt-3" action="ejercicio2.php" method="POST">
   <div class="form-group">
@@ -57,35 +57,41 @@
 </form>
 
 <hr>
-<br>
 
 </div>
     </div>
         </div>
 
 
-        <?php if(isset($_POST["botonCalcular"])): ?>
-            
-    <h4 class="text-center">
-     <?php 
+        <?php if(isset($_POST["botonCalcular"])):?>
+ 
+  
+ <h4 class="text-center">
 
-    $altura=$_POST["altura"];
-    $peso=$_POST["peso"];
-    $imc=$peso/$altura*$altura;
-    
-    if ($imc < 18.5){
-      echo("Su peso es insuficiente, es de".$imc);
-    }
+ <?php
 
-    elseif($imc>= 18.5 &&24.9){
-      echo("Su peso es normal, es de".$imc);
-    }
-    
-     ?>
-    </h4>
+     $peso = $_POST["peso"]; 
+     $Altura = $_POST["altura"]; 
+     
+     $numero=2;
+     $pesoAlCuadrado = sqrt ($numero);
 
-    <?php endif ?>
+     $oper=$peso/($peso*$pesoAlCuadrado);
 
+ if($oper >18.5){
+     echo ("Su peso es insuficiente: ".$oper);
+     
+     echo ("Su peso es normal: ".$oper);
+     }
+ 
+     elseif($oper >= 25 && 26.9){
+      echo ("Sobre peso grado 1: ".$oper);
+      }
+ 
+ ?> 
+
+</h4> 
+<?php endif ?>
 
    
 

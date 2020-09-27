@@ -43,7 +43,9 @@
          <div class="col-4">
 
          <h6 class="mt-4 text-center"> INGRESE LOS SIGUIENTES DATOS </h6>
-                
+
+
+
 <form class= "mt-3" action="ejercicio3.php" method="POST">
   <div class="form-group">
     <label for="exampleFormControlInput1">Cantidad de zapatos comprados</label>
@@ -52,7 +54,6 @@
   <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">CALCULAR</button>
 </form>
 
-<h4 class="mt-4 text-center"> El valor de la compra es </h4>
 
 <hr>
 <br>
@@ -67,24 +68,35 @@
     <h4 class="text-center">
      <?php 
 
-    $cantZapatos=$_POST["cantidadZapatos"];
-   
     
-    if ($cantZapatos <= 3){
-      echo("Tienes un descuento del 10%");
-    }
+$cantidad = $_POST["cantidadZapatos"]; 
+$precio= 30000;
+$totalCompra= $cantidad * $precio;
+$desc1=0.1;
+$desc2=0.2;
+$desc3=0.5;
 
-    elseif($cantZapatos >8 ){
-      echo("Tienes un descuento del 50%");
-      
-    }
+
+if($cantidad= 1 < 3){
+$valorPagar=$totalCompra*$desc1;
+echo ("El valor a pagar es: ".$valorPagar);
+
+
+
+}elseif($cantidad=4 <=8){
+  $valorPagar=$totalCompra*$desc2;
+echo ("El valor a pagar es: ".$valorPagar);
+}
+
+elseif($cantidad= 9  <30){
+  $valorPagar=$totalCompra*$desc3;
+  echo ("El valor a pagar es: ".$valorPagar);
+}
 
      ?>
     </h4>
     <?php endif ?>
 
-
-   
 
 </body>
 </html>
