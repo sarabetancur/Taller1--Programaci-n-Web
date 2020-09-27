@@ -47,13 +47,13 @@
 <form class= "mt-3" action="ejercicio2.php" method="POST">
   <div class="form-group">
     <label for="exampleFormControlInput1">Ingresa tu peso</label>
-    <input type="number" class="form-control" placeholder="Peso" name="peso">
+    <input type="number" class="form-control" placeholder="Peso" name="peso" required>
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Ingresa tu altura</label>
-    <input type="number" class="form-control" placeholder="Altura" name="altura">
+    <input type="number" class="form-control" placeholder="Altura" name="altura" required>
   </div>
-  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">CALCULAR</button>
+  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">Calcular IMC</button>
 </form>
 
 <hr>
@@ -72,8 +72,6 @@
 
      $peso = $_POST["peso"]; 
      $Altura = $_POST["altura"]; 
-
-
      $oper=$peso/($Altura*$Altura)*10000;
 
  if($oper < 18.5){
@@ -86,11 +84,11 @@
  
 
     elseif (($oper >=25) and ($oper <=26.9)){
-      echo ("Sobre peso grado 1, su IMC es: ".$oper);
+      echo ("Sobre peso grado I, su IMC es: ".$oper);
     }
  
     elseif (($oper >=27) and ($oper <=29.9)){
-      echo ("Sobre peso grado 2 (preobesidad), su IMC es: ".$oper);
+      echo ("Sobre peso grado II (preobesidad), su IMC es: ".$oper);
     }
 
     elseif (($oper >=30) and ($oper <=34.9)){

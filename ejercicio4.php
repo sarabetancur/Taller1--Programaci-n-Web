@@ -42,53 +42,63 @@
     <div class="row justify-content-center">
          <div class="col-4">
 
-         <h6 class="mt-4 text-center"> INGRESE LOS SIGUIENTES DATOS </h6>
-                
+         <h6 class="mt-4 text-center"> SALARIO POSTOBÓN </h6>
+
+
+
 <form class= "mt-3" action="ejercicio4.php" method="POST">
   <div class="form-group">
-    <label for="exampleFormControlInput1">Cantidad Horas Trabajadas</label>
-    <input type="number" class="form-control" placeholder="Horas trabajadas" name="ht">
+    <label for="exampleFormControlInput1">Ingrese cantidad de horas Trabajadas </label>
+    <input type="number" class="form-control" placeholder="Cantidad de horas trabajadas" name="cantidadhoras" required>
   </div>
-
-  
-  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">CALCULAR</button>
+  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">Salario Semanal</button>
 </form>
 
 <hr>
+<br>
 
 </div>
     </div>
         </div>
-     
-          
-<?php if(isset($_POST["botonCalcular"])):?>
- 
-  
-  <h4 class="text-center">
 
-  <?php
- 
-        $horas = $_POST["ht"]; 
-        $he=25000;
-	  
-	
-	if($horas <40){
-      $sueldo = $horas*20000;
-      echo ("Su sueldo semanal es de ".$sueldo);
-	    
-	
-	
-  }elseif($horas > 40){
-    $sueldo = $horas*20000;
-      echo ("Su sueldo semanal es de ".$sueldo);
-	    }
-	
-	
-	?> 
 
-</h4> 
-<?php endif ?>
+    <?php if(isset($_POST["botonCalcular"])): ?>
+            
+    <h4 class="text-center">
+    <?php 
+
+    
+$cantidad = $_POST["cantidadhoras"]; 
+
+if($cantidad <=40){
+  $salario = $cantidad * 20000;
+  echo ("El valor de la hora trabajada es de $20000 ");
+  echo("<br>");
+  echo ("El salario semanal es de: $".$salario);
+}
+
+elseif($cantidad>=41){
+  $basico = 40*20000;
+  $he=$cantidad-40;
+  $valorExtra=$he*25000;
+  $sal=$basico+$valorExtra;
+  echo ("El valor de la hora extra trabajada es de $25000 ");
+  echo("<br>");
+  echo ("El pago de horas extras es de: $".$valorExtra);
+  echo("<br>");
+  echo ("El salario semanal es de: $".$sal);
+
+}
+
+
+     ?>
+    </h4>
+    <?php endif ?>
+
 
 </body>
 </html>
 
+
+
+     

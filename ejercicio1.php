@@ -47,11 +47,11 @@
 <form class= "mt-3" action="ejercicio1.php" method="POST">
   <div class="form-group">
     <label for="exampleFormControlInput1">Número 1</label>
-    <input type="number" class="form-control" placeholder="Ingrese Número UNO" name="numeroUno">
+    <input type="number" class="form-control" placeholder="Ingrese Número UNO" name="numeroUno" required>
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Número 2</label>
-    <input type="number" class="form-control" placeholder="Ingrese Número DOS" name="numeroDos">
+    <input type="number" class="form-control" placeholder="Ingrese Número DOS" name="numeroDos" required>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Seleccione /Sumar-Restar-Multiplicar-Dividir/</label>
@@ -62,7 +62,7 @@
       <option name="division">/</option>
     </select>
   </div> 
-  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">CALCULAR</button>
+  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">Calcular</button>
 </form>
 
 <hr>
@@ -79,29 +79,27 @@
 
   <?php
  
-	    $primero = $_POST["numeroUno"]; //Obtengo el valor del formulario name="primero"
-	    $segundo = $_POST["numeroDos"]; //Obtengo el valor del formulario name="segundo"
-	    $oper = $_POST["operacion"];   //Obtengo el valor del formulario name="operador"
+	    $primero = $_POST["numeroUno"]; 
+	    $segundo = $_POST["numeroDos"]; 
+	    $oper = $_POST["operacion"];   
 	
-	//si es suma suma
 	if($oper == "+"){
       $suma = $primero + $segundo;
       echo ("La suma es: ".$suma);
 	    
 	
-	//si es restaresta
   }elseif($oper == "-"){
       $resta = ($primero) - ($segundo);
       echo ("La resta es: ".$resta);
 	    }
 	
-	//si es multiplicación
+	
 	elseif($oper == "*"){
       $mult = ($primero) * ($segundo);
       echo ("La multiplicación es: ".$mult);
 	    }
 	
-	//si es división
+	
 	elseif($oper == "/"){
       $division = ($primero) / ($segundo);
       echo ("La división es: ".$division);

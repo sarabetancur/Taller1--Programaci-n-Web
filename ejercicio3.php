@@ -42,18 +42,17 @@
     <div class="row justify-content-center">
          <div class="col-4">
 
-         <h6 class="mt-4 text-center"> INGRESE LOS SIGUIENTES DATOS </h6>
+         <h6 class="mt-4 text-center"> PROMOCIÓN SPRING STEP </h6>
 
 
 
 <form class= "mt-3" action="ejercicio3.php" method="POST">
   <div class="form-group">
-    <label for="exampleFormControlInput1">Cantidad de zapatos comprados</label>
-    <input type="number" class="form-control" placeholder="Cantidad de zapatos" name="cantidadZapatos">
+    <label for="exampleFormControlInput1">Cantidad de zapatos </label>
+    <input type="number" class="form-control" placeholder="Cantidad de zapatos comprados" name="cantidadZapatos" required>
   </div>
-  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">CALCULAR</button>
+  <button type="submit" class="btn btn-light mt-3 btn-block" name="botonCalcular">Valor de la Compra</button>
 </form>
-
 
 <hr>
 <br>
@@ -66,32 +65,57 @@
     <?php if(isset($_POST["botonCalcular"])): ?>
             
     <h4 class="text-center">
-     <?php 
+    <?php 
 
     
 $cantidad = $_POST["cantidadZapatos"]; 
-$precio= 30000;
-$totalCompra= $cantidad * $precio;
-$desc1=0.1;
-$desc2=0.2;
-$desc3=0.5;
+$precio1= 30000;
+$precio2= 40000;
+$precio3= 50000;
 
 
-if($cantidad= 1 < 3){
-$valorPagar=$totalCompra*$desc1;
-echo ("El valor a pagar es: ".$valorPagar);
+if ($cantidad <=2){
+  echo("El precio de cada par de zapatos es: " .$precio1);
+  echo("<br>");
+  $totalcompra=($cantidad)*($precio1);
+  echo("El valor total de la compra es: ".$totalcompra);
+  echo("<br>");
+  echo("No tiene descuento");
+ 
+ }
+
+elseif($cantidad ==3){
+  echo("El precio de cada par de zapatos es: " .$precio1);
+  echo("<br>");
+  $totalcompra=($cantidad)*($precio1);
+  echo("El valor total de la compra sin descuento es: ".$totalcompra); 
+  echo("<br>");
+  $totaldescuento=$totalcompra-($totalcompra*0.10);
+  echo ("El valor de compra con un descuento del 10% es: ".$totaldescuento);
+  
+
+}elseif (($cantidad >=4) and($cantidad <=8)){
+  echo("El precio de cada par de zapatos es: " .$precio2);
+  echo("<br>");
+  $totalcompra=($cantidad)*($precio2);
+  echo("El valor total de la compra sin descuento es: ".$totalcompra); 
+  echo("<br>");
+  $totaldescuento=$totalcompra-($totalcompra*0.20);
+   echo ("El valor de compra con un descuento del 20% es: ".$totaldescuento);
+ }
+
+elseif ($cantidad >=9){
+  echo("El precio de cada par de zapatos es: " .$precio3);
+  echo("<br>");
+  $totalcompra=($cantidad)*($precio3);
+  echo("El valor total de la compra sin descuento es: ".$totalcompra);
+  echo("<br>");
+  $totaldescuento=$totalcompra-($totalcompra*0.50);
+   echo ("El valor de compra con un descuento del 50% es: ".$totaldescuento);
+ }
 
 
 
-}elseif($cantidad=4 <=8){
-  $valorPagar=$totalCompra*$desc2;
-echo ("El valor a pagar es: ".$valorPagar);
-}
-
-elseif($cantidad= 9  <30){
-  $valorPagar=$totalCompra*$desc3;
-  echo ("El valor a pagar es: ".$valorPagar);
-}
 
      ?>
     </h4>
