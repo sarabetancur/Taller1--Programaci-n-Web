@@ -29,7 +29,7 @@
         <a class="nav-link" href="ejercicio3.php">Ejercicio 3</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Ejercicio 4</a>
+        <a class="nav-link" href="ejercicio4.php">Ejercicio 4</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Ejercicio 5</a>

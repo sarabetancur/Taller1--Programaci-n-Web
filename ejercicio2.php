@@ -29,7 +29,7 @@
         <a class="nav-link" href="ejercicio3.php">Ejercicio 3</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Ejercicio 4</a>
+        <a class="nav-link" href="ejercicio4.php">Ejercicio 4</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Ejercicio 5</a>
@@ -72,22 +72,47 @@
 
      $peso = $_POST["peso"]; 
      $Altura = $_POST["altura"]; 
-     
-     $numero=2;
-     $pesoAlCuadrado = sqrt ($numero);
 
-     $oper=$peso/($peso*$pesoAlCuadrado);
 
- if($oper >18.5){
-     echo ("Su peso es insuficiente: ".$oper);
+     $oper=$peso/($Altura*$Altura)*10000;
+
+ if($oper < 18.5){
+     echo ("Su peso es insuficiente, su IMC es: ".$oper);
      
-     echo ("Su peso es normal: ".$oper);
-     }
  
-     elseif($oper >= 25 && 26.9){
-      echo ("Sobre peso grado 1: ".$oper);
-      }
+ }elseif (($oper >=18.5) and($oper <=24.9)){
+      echo ("Normopeso, su IMC es: ".$oper);
+    }
  
+
+    elseif (($oper >=25) and ($oper <=26.9)){
+      echo ("Sobre peso grado 1, su IMC es: ".$oper);
+    }
+ 
+    elseif (($oper >=27) and ($oper <=29.9)){
+      echo ("Sobre peso grado 2 (preobesidad), su IMC es: ".$oper);
+    }
+
+    elseif (($oper >=30) and ($oper <=34.9)){
+      echo ("Obesidad tipo I, su IMC es:  ".$oper);
+    }
+
+    elseif (($oper >=35) and ($oper <=39.9)){
+      echo ("Obesidad tipo II, su IMC es: ".$oper);
+    }
+
+    elseif (($oper >=40) and ($oper <=49.9)){
+      echo ("Obesidad tipo III (morbida), su IMC es: ".$oper);
+    }
+
+    
+    elseif ($oper >50){
+      echo ("Obesidad tipo IV (Extrema), su IMC es: ".$oper);
+    }
+ 
+ 
+ 
+
  ?> 
 
 </h4> 
