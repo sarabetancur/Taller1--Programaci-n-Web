@@ -30,10 +30,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="ejercicio4.php">Ejercicio 4</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Ejercicio 5</a>
-      </li>
+        </li>
     </ul>
   </div>
 </nav>

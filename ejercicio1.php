@@ -31,9 +31,7 @@
       <li class="nav-item">
         <a class="nav-link" href="ejercicio4.php">Ejercicio 4</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Ejercicio 5</a>
-      </li>
+     
     </ul>
   </div>
 </nav>
@@ -42,7 +40,7 @@
     <div class="row justify-content-center">
          <div class="col-4">
 
-         <h6 class="mt-4 text-center"> INGRESE LOS SIGUIENTES DATOS </h6>
+         <h6 class="mt-4 text-center"> INGRESE LOS SIGUIENTES DATOS PARA REALIZAR LA OPERACIÓN </h6>
                 
 <form class= "mt-3" action="ejercicio1.php" method="POST">
   <div class="form-group">

@@ -31,15 +31,22 @@
       <li class="nav-item">
         <a class="nav-link" href="ejercicio4.php">Ejercicio 4</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Ejercicio 5</a>
-      </li>
+     
     </ul>
   </div>
 </nav>
 
-<h6 class="mt-4 text-center">SON 5 EJERCICIOS A REALIZAR </h6>
+<div class="container">
+  <div class="row">
+    <div class="col-m-0 col-md-6. col-lg-6 justify-content-center align-items-center">    
+         <img src="img/2-02.png" class="img-responsive" style= "width:205%">       
+     </div>
+  </div>
+ </div> 
 
+ <hr>
+
+ <h6 class="text-center"> PROGRAMACIÓN PARA LA WEB 1 <h6>
 
 
 </body>
